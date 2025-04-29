@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      height: 12vh;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.747);
+      display: flex;
+      align-items: center;
+      padding: 5px 15px;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .header h3 {
+      color: whitesmoke;
+    }
+
+    .ul-links {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      font-size: 10px;
+    }
+    .ul-links li {
+      list-style: none;
+    }
+    .ul-links a {
+      text-decoration: none;
+      color: white;
+    }
+    .ul-links li :hover {
+      transition: all 1s ease;
+      transform: translateX(5%);
+    }
+    .ul-links a :hover {
+      text-decoration: dashed;
+      color: black;
+    }
+
+    .btn {
+      background-color: rgba(216, 142, 46, 0.5);
+      padding: 5px 15px;
+      font-size: 10px;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    .con-1 {
+      height: 100vh;
+      width: 100%;
+      background-image: url(pexels.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: grayscale(70%);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .welcome {
+      height: auto;
+      padding: 2px 0;
+      margin-bottom: 10px;
+      width: 230px;
+      text-align: center;
+      color: white;
+      background-color: rgba(255, 166, 0, 0.694);
+      font-size: 10px;
+      font-weight: bolder;
+    }
+    .second {
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+    .second h1 {
+      color: white;
+    }
+    .button {
+      margin-top: 10px;
+      background-color: rgb(255, 145, 0);
+      padding: 5px 14px;
+      border: none;
+      font-size: 11px;
+      color: white;
+      cursor: pointer;
+    }
+    .black-con {
+      height: 25vh;
+      width: 90%;
+      background-color: rgb(40, 39, 39);
+      position: absolute;
+      bottom: -18%;
+      display: flex;
+      justify-content: center;
+    }
+    .con-black {
+      height: 11vh;
+      width: 90%;
+      background-color: black;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 11px;
+    }
+    .con-black h5,
+    p {
+      color: white;
+    }
+    .btn-2 {
+      color: white;
+      border: none;
+      padding: 7px 12px;
+      font-size: 10px;
+      font-weight: bolder;
+      background-color: rgb(255, 125, 0);
+      cursor: pointer;
+    }
+
+    .black-con p {
+      font-size: 10px;
+      position: absolute;
+      bottom: 18px;
+      font-style: italic;
+    }
+    .con-2 {
+      height: 110vh;
+      width: 100%;
+      background-color: rgb(243, 243, 243);
+    }
+    .card-con {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding-top: 12%;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .card-1 {
+      height: 65vh;
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      background-color: white;
+      color: rgb(0, 0, 0);
+      text-align: left;
+    }
+    .card-1 h3 {
+      padding-top: 0px;
+      font-size: 12px;
+      padding-top: 8px;
+      padding-bottom: 5px;
+    }
+    .card-1 p {
+      font-size: 7.5px;
+      line-height: 10px;
+      color: black;
+    }
+    .card-1 h6 {
+      padding-top: 8px;
+      font-size: 6px;
+    }
+    .card-2 {
+      height: 65vh;
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      background-color: white;
+      color: rgb(0, 0, 0);
+      text-align: left;
+    }
+    .card-2 h3 {
+      padding-top: 0px;
+      font-size: 12px;
+      padding-top: 8px;
+      padding-bottom: 5px;
+    }
+    .card-2 p {
+      font-size: 7.5px;
+      line-height: 10px;
+      color: black;
+    }
+    .card-2 h6 {
+      padding-top: 8px;
+      font-size: 6px;
+    }
+    .card-3 {
+      height: 65vh;
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      background-color: white;
+      color: rgb(0, 0, 0);
+      text-align: left;
+    }
+    .card-3 h3 {
+      padding-top: 0px;
+      font-size: 12px;
+      padding-top: 8px;
+      padding-bottom: 5px;
+    }
+    .card-3 p {
+      font-size: 7.5px;
+      line-height: 10px;
+      color: black;
+    }
+    .card-3 h6 {
+      padding-top: 8px;
+      font-size: 6px;
+    }
+    .btn-div {
+      margin-top: 15px;
+      margin-left: 44%;
+    }
+
+    .btn-3 {
+      color: white;
+      font-size: 8px;
+      padding: 5px 8px;
+      border: none;
+      background-color: rgba(145, 65, 0, 0.847);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .third {
+      height: 80vh;
+      width: 100%;
+    }
+    .third img {
+      object-fit: cover;
+      height: inherit;
+      width: inherit;
+      filter: grayscale(50%);
+    }
+    .foursec {
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      padding-top: 30px;
+      line-height: 13px;
+    }
+    .foursec h3 {
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+    .foursec h6 {
+      font-weight: 500;
+    }
+    .cards {
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .cards img {
+      height: 55vh;
+      width: 26%;
+      object-fit: cover;
+    }
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 3px 0;
+      font-size: 10px;
+    }
+    .footer {
+      background-color: rgb(149, 81, 33);
+      color: white;
+      font-size: x-small;
+      text-align: left;
+      position: relative;
+    }
+    .sub-foot1 {
+      color: white;
+      p {
+        display: inline-block;
+        padding: 10px;
+      }
+      h1 {
+        padding-top: 4px;
+        padding-left: 9px;
+      }
+    }
+    .sub-foot2 {
+      text-align: left;
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .sub-foot3 {
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <h3>ROYELLA</h3>
+      <nav>
+        <ul class="ul-links">
+          <li><a href="#section-1">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="login.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button class="btn">Booking Now</button>
+    </header>
+    <main>
+      <div class="con-1">
+        <div class="welcome"><p>WELCOME TO ROYELLA HOTEL</p></div>
+        <div class="second">
+          <h1>A New Vision Of Comfort</h1>
+          <button class="button">More Options</button>
+        </div>
+        <div class="black-con">
+          <div class="con-black">
+            <h5>Arrival Date</h5>
+            <h5>Arrival Date</h5>
+            <h5>Adults</h5>
+            <h5>Childern</h5>
+            <button class="btn-2">Book Now</button>
+          </div>
+          <p>Check-in: After 01:00pm & Check-out: Before 12:00am</p>
+        </div>
+      </div>
+      <section id="section-1">
+        <div class="con-2">
+          <div class="card-con">
+            <div class="card-1">
+              <img
+                src="roberto-nickson-rEJxpBskj3Q-unsplash.jpg"
+                alt=""
+                height="120px"
+                width="150px"
+              />
+              <h3>Co-working suite For modern startups</h3>
+              <p>
+                Accommdation at Hotel Room Features best constemporary design
+                and central hearing. All rooms include is 20inch...
+              </p>
+              <h6>BOOKING RESULTS</h6>
+            </div>
+            <!-- card 2 -->
+            <div class="card-2">
+              <img
+                src="74d9355a3bbb36bc15f02f61abc3ff19.jpg"
+                alt=""
+                height="120px"
+                width="150px"
+              />
+              <h3>The Grand Suite Do you feel great?</h3>
+              <p>
+                Accommdation at Hotel Room Features best constemporary design
+                and central hearing. All rooms include is 20inch...
+              </p>
+              <h6>BOOKING RESULTS</h6>
+            </div>
+            <!-- card 3 -->
+            <div class="card-3">
+              <img
+                src="ab9112edda7fa66d573cb1d2bda175a0.jpg"
+                alt=""
+                height="120px"
+                width="150px"
+              />
+              <h3>Double Deluxe This is classic best comfort</h3>
+              <p>
+                Accommdation at Hotel Room Features best constemporary design
+                and central hearing. All rooms include is 20inch...
+              </p>
+              <h6>BOOKING RESULTS</h6>
+            </div>
+          </div>
+          <div class="btn-div">
+            <button class="btn-3">VIEW ALL ROOMS</button>
+          </div>
+        </div>
+      </section>
+      <!-- 3rd section -->
+      <div class="third">
+        <img
+          src="point3d-commercial-imaging-ltd-JHidVK7VclY-unsplash.jpg"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="foursec">
+        <h3>Special Offers</h3>
+        <h6>
+          We provide seasonal special discount for selected room. let us know
+          the <br />room you are interested and lets make it happen.
+        </h6>
+        <div class="cards">
+          <img src="lauren-pelesky-2-B9FywKnNo-unsplash.jpg" alt="" />
+          <img src="jarek-ceborski-jn7uVeCdf6U-unsplash - Copy.jpg" alt="" />
+          <img src="pexels-jvdm-1457842.jpg" alt="" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="sub-foot1">
+          <h1>Royella.</h1>
+          <p>Careers <br />Our Cafe <br />Chobani News <br />Foodservice</p>
+          <p>
+            Consumer care <br />Alumni <br />Chobani*Canada <br />Chobani*Mexico
+          </p>
+          <br /><br />
+        </div>
+        <div class="sub-foot2">
+          <h3>Get the Royella Hotel</h3>
+          <br />
+          <input
+            type="email"
+            name="email"
+            id=""
+            placeholder="Your email here"
+          />
+          <br />
+          <br />
+          <input type="checkbox" />
+          <label for="by"
+            >By checking the box, you agree that you <br />
+            are at least 16 years of age.</label
+          >
+        </div>
+        <div class="sub-foot3">
+          <hr />
+          <br />
+          <p>
+            Website*terms | Privacy Policy | Accessibilty Statement | CA
+            Transparency in Supply Chains Act | Supplier Code of Conduct |<br />
+            Marketing to Childern | Do Not Sell My Information
+          </p>
+          <p>@2021 Royella ,LLC. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
